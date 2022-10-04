@@ -16,9 +16,9 @@ export default function App() {
   const calculate = () => {
     const forbidden = /[+\-=\[\]{};'A-Z`!@#:"\\|,.<>\/?~a-z$%^&*()_]/; 
     if(weight.length == 0 || forbidden.test(weight) || weight.length < 1) { 
-      alert('Weight has not been given')
+      alert('Weight has not been set correctly!')
     } else if (checked == -1) {  
-        alert('You must select a gender before calculation can complete!')
+        alert('You must select a gender before the calculation can complete!')
     } else {
         let type = checked == 0 ? type = 0.7  : type = 0.6 
           let result = ((bottles*0.33)*8*4.5 - (hours*(weight / 10)))/(weight*type); 
@@ -44,7 +44,7 @@ export default function App() {
                 <Button title = {'Calculate'}  onPress = {() => calculate()}/>
                 <View style = {Styles.spacing}/> 
                   <View style = {Styles.resultContainer}>
-                      <Text style={Styles.black}>Answer :</Text>
+                      <Text style={Styles.black}>Result :</Text>
                       <Text style = { [result <= 0.5 ? Styles.green : result >= 0.5 && result <= 1.2 ? Styles.yellow : Styles.red ]}>{result}</Text>
                       <Text style={Styles.black}>per mil</Text>
                   </View>                               
