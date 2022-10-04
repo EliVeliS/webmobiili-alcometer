@@ -34,7 +34,8 @@ export default function App() {
     <View style={Styles.container}>
       <ScrollView>
         <Text style={Styles.title}>ALCOMETER</Text>
-          <Text style={Styles.secondTitle}>Weight :</Text>
+        <Text style={Styles.slogan}>App to test how drunk you are</Text>
+          <Text style={Styles.secondTitle2}>Weight :</Text>
            <TextInput style={Styles.textInput} placeholder={" Set weight..."} keyboardType="numeric" value = {weight} onChangeText={ setWeight }/>
               <Dropdown bottles = {bottles} setBottles = { setBottles } hours = { hours } setHours = { setHours }/>
               <Text style={Styles.secondTitle}>Gender :</Text>

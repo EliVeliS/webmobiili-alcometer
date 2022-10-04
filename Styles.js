@@ -2,11 +2,10 @@ import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
     container: {
+        top: 30,
+        padding: 20,
         flex: 1,
         backgroundColor: '#fff',
-        top: 24,
-        padding: 15,
-
       },
       title: {
         textAlign: 'center',
@@ -16,7 +15,14 @@ export default StyleSheet.create({
         fontWeight: 'bold',
         color: '#6495ed',
       },
+      slogan : {
+        textAlign: 'center',
+        marginTop: -58,
+        marginBottom: 50,
+        fontStyle: 'italic'
+      },
       secondTitle: {
+        fontStyle: 'Times New Roman',
         textAlign: 'left',
         marginLeft: 10,
         fontWeight: 'bold',
@@ -47,13 +53,13 @@ export default StyleSheet.create({
         justifyContent: 'space-between'
       },
       radioButton: {
-            height: 30,
-            width: 30,
-            borderRadius: 100,
-            borderWidth: 2,
-            justifyContent: 'center',
-            borderColor: '#3740ff',
-            alignItems: 'center',
+        height: 30,
+        width: 30,
+        borderRadius: 100,
+        borderWidth: 2,
+        justifyContent: 'center',
+        borderColor: '#3740ff',
+        alignItems: 'center',
       },
       selectedRadioButton: {  
           width: 20,
@@ -74,14 +80,14 @@ export default StyleSheet.create({
        borderRadius: 10,
       },
       dropDownTitles : {
-        borderColor: '#3740ff',
-        width: 147,
-        borderWidth: 1,
-        borderRadius: 10,
-        textAlign: 'left',
-        fontSize: 25,
-        marginLeft: 10,
-        color: 'lightGrey',
+       borderColor: '#3740ff',
+       width: 147,
+       borderWidth: 1,
+       borderRadius: 10,
+       textAlign: 'left',
+       fontSize: 25,
+       marginLeft: 10,
+       color: 'lightGrey',
       },    
       resultContainer: {
         alignItems: 'center',
