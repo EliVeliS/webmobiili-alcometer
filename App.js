@@ -40,7 +40,7 @@ export default function App() {
               <Dropdown bottles = {bottles} setBottles = { setBottles } hours = { hours } setHours = { setHours }/>
               <Text style={Styles.secondTitle}>Gender :</Text>
                 <Radiobutton  checked = {checked} setChecked = {setChecked}/>  
-                <Text style={Styles.secondTitle2}>_________________________________</Text>
+                <Text style={Styles.secondTitle2}>________________________________</Text>
                 <View style = {Styles.spacing}/>   
                 <Button title = {'Calculate'}  onPress = {() => calculate()}/>
                 <View style = {Styles.spacing}/> 

@@ -1,4 +1,4 @@
-import {View, Text, TouchableOpacity} from 'react-native'
+import {View, Text, TouchableOpacity, ScrollView} from 'react-native'
 import Styles from '../Styles'
 import {useState} from 'react'
 
@@ -17,7 +17,7 @@ export default function Dropdown({bottles, setBottles, hours, setHours}) {
         setChooseHours(!chooseHours)
     }
     
-  return (<View>      
+  return (<View>  
             <Text style = { Styles.secondTitle }>Bottles :</Text>
         <TouchableOpacity onPress = { () => setChooseBottles(!chooseBottles)}>
             <Text style = { Styles.dropDownTitles }> {bottles} bottles▼</Text>
@@ -25,16 +25,18 @@ export default function Dropdown({bottles, setBottles, hours, setHours}) {
             {!chooseBottles ? (
                     <View></View>
                 ):(<View style =  {Styles.dropDownContainer}>
+                    <ScrollView nestedScrollEnabled = {true}>  
                     {data.map((data, key) => {
                         return( <View key = {data}>
                         <TouchableOpacity onPress = { () => eventBottles(key) } >
                                 <View>
-                                    <Text style = {Styles.dropDownItems}>{data} Bottles</Text>
+                                    <Text style = {Styles.dropDownItems}>  {data} Bottles</Text>
                                 </View>
                             </TouchableOpacity>   
                         </View>   
                         )
                     })}
+                    </ScrollView>
                     </View>
                 )}
             <Text style = { Styles.secondTitle }>Time :</Text>
@@ -44,17 +46,19 @@ export default function Dropdown({bottles, setBottles, hours, setHours}) {
             {!chooseHours ? (
                     <View></View>
                 ):(<View style =  {Styles.dropDownContainer}>
+                    <ScrollView nestedScrollEnabled = {true}> 
                     {data.map((data, key) => {
                         return( <View key = {data}>
                         <TouchableOpacity onPress = { () => eventHours(key) } >
                                 <View>
-                                    <Text style = {Styles.dropDownItems}>{data} hours</Text>
+                                    <Text style = {Styles.dropDownItems}>  {data} hours</Text>
                                 </View>
                             </TouchableOpacity>
                             
                         </View>   
                         )
                     })}
+                    </ScrollView>
                     </View>
                 )}
     </View>)

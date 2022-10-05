@@ -73,11 +73,14 @@ export default StyleSheet.create({
         
       },
       dropDownItems: {
+       marginLeft: 10,
        border: 1,
-       padding: 10,
+       padding: 2,
        fontWeight: 'bold',
+       fontSize: 20,
        borderWidth: 1,
        borderRadius: 10,
+       width: 147
       },
       dropDownTitles : {
        borderColor: '#3740ff',
